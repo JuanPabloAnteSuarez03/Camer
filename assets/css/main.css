@@ -705,10 +705,10 @@ section,
 .section-title h2:before,
 .section-title h2:after {
   content: "";
-  width: 50px;
+  width: 80%;
   height: 2px;
   background: var(--accent-color);
-  display: inline-block;
+  display: an;
 }
 
 .section-title h2:before {
@@ -726,6 +726,26 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  width: 80px;
+  left: 20px;
+  height: 80px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float img {
+  width: 60px;
+}
+
+
 .hero {
   --default-color: #ffffff;
   --background-color: #000000;
@@ -739,6 +759,16 @@ section,
   justify-content: center;
   overflow: hidden;
 }
+
+.hero-overlay {
+  background: rgba(77,24,16,0.4); /* Color café con transparencia */
+  padding: 20px;
+  border-radius: 0; /* Bordes redondeados */
+  display: inline-block;
+  text-align: center;
+  color: white; /* Asegura que el texto sea blanco */
+}
+
 
 .hero .info {
   position: relative;
