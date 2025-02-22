@@ -413,26 +413,28 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   background: url("../img/footer-bg.jpg") top center no-repeat;
+  background-position: center center;
   background-size: cover;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
+  padding-top: 50px;
 }
 
 .footer .container {
   position: relative;
+  
 }
 
 .footer:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
+  z-index: 0; /* Asegura que esté detrás del contenido */
 }
 
-.footer .footer-top {
-  padding-top: 50px;
-}
+
 
 .footer .footer-about .logo {
   line-height: 1;
@@ -455,6 +457,7 @@ h6 {
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font);
+  
 }
 
 .footer .social-links a {
@@ -477,20 +480,22 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 26px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  text-align: right;
 }
 
 .footer .footer-links {
   margin-bottom: 30px;
+  list-style: none; /* Opcional: elimina los puntos de la lista */
+  padding-right: 0; /* Asegura que no haya espacio extra */
 }
 
 .footer .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  text-align: right; /* Alinea el contenido de la lista */
+  padding-right: 0;
 }
 
 .footer .footer-links ul i {
@@ -502,17 +507,33 @@ h6 {
 .footer .footer-links ul li {
   padding: 10px 0;
   display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
   align-items: center;
+  list-style: none;
 }
+
+@media (max-width: 768px) {
+  .footer .footer-links ul {
+    text-align: left; /* Centra la lista en móviles */
+    margin-left: -25px;
+  }
+
+  .footer .footer-links ul li {
+    justify-content: left; /* Centra los elementos dentro del li */
+  }
+  .footer h4 {
+    text-align: left; /* Centra el título en móviles */
+  }
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
 .footer .footer-links ul li:first-child {
   padding-top: 0;
-}
-
-.footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  display: inline-block;
-  line-height: 1;
+  
 }
 
 .footer .footer-links ul a:hover {
@@ -536,6 +557,13 @@ h6 {
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+}
+
+.footer .footer-links ul a {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  display: inline-block;
+  line-height: 1;
+
 }
 
 /*--------------------------------------------------------------
