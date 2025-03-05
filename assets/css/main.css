@@ -1385,6 +1385,38 @@ section,
 .features .tab-pane p:last-child {
   margin-bottom: 0;
 }
+/*--------------------------------------------------------------
+# Servicios Section
+--------------------------------------------------------------*/
+#servicios-container {
+  background-color: #D1C4B2; /* Cambia el color de fondo */
+  padding: 2.5rem; /* Equivale a p-10 en Tailwind */
+  border-radius: 1rem; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.camer-button {
+    margin: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #9c5e30;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.camer-button:hover {
+    background-color: #9c5e30;
+    color: white;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Projects Section
