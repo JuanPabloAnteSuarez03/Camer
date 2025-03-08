@@ -1706,6 +1706,151 @@ body {
   }
 }
 
+
+/*--------------------------------------------------------------
+# Map Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Sección de Contacto
+--------------------------------------------------------------*/
+.contacto-section {
+  padding: 5rem 0;
+  background-color: #ffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contacto-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contacto-title {
+  color: #5c2a18;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contacto-title::before,
+.contacto-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: var(--green-color);
+}
+
+.contacto-title::before {
+  left: -70px;
+}
+
+.contacto-title::after {
+  right: -70px;
+}
+
+.contacto-subtitle {
+  color: #1d3000;
+  font-size: 1.1rem;
+}
+
+.contacto-info-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.contacto-card {
+  background-color: #ffff;
+  border: 1px solid #e0e0e0;
+  border-color: var(--coffe-color);
+  padding: 2rem;
+  width: 30%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contacto-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.contacto-icon {
+  margin-bottom: 1.5rem;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px dashed #f5d56c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle i {
+  color: #fbb400;
+  font-size: 2rem;
+}
+
+.contacto-info h3 {
+  color: #560009;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contacto-info p {
+  color: var(--coffe-color);
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mapa-container {
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contacto-info-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .contacto-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 438px) {
+  .contacto-title::before,
+  .contacto-title::after {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Estadísticas Section - Mejorado
 --------------------------------------------------------------*/
