@@ -2225,106 +2225,270 @@ body {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .inner-title {
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin: 30px 0;
+/* Main section styles */
+#main-about {
+  margin-top: 80px; /* Adjust based on your header height */
+  background-color: #3d1f16 ;
+  background-image: 
+                    url(../img/FONDO-PRINCIPAL.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  scroll-margin-top: 92px;
+  overflow: clip;
 }
-
-@media (min-width: 991px) {
-  .about .inner-title {
-    max-width: 65%;
-    margin: 0 0 80px 0;
-  }
-}
-
-.about .our-story {
-  padding: 40px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-}
-
-@media (min-width: 991px) {
-  .about .our-story {
-    padding-right: 35%;
-  }
-}
-
-.about .our-story h4 {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.about .our-story h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.about .our-story p:last-child {
-  margin-bottom: 0;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.about ul li {
-  padding: 5px 0;
+/* Estilo para pantalla completa al abrir la página */
+#about {
+  min-height: 95vh; /* Usa toda la altura de la ventana */
+  padding-top: 100px; /* Ajusta según la altura de tu header */
+  padding-bottom: 60px;
+  margin-top: 0;
   display: flex;
   align-items: center;
 }
 
-.about ul i {
-  font-size: 1.25rem;
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  color: var(--accent-color);
+/* Asegúrate de que el contenedor se expande correctamente */
+#about .container {
+  width: 100%;
+  max-width: 1320px; /* O el ancho máximo que prefieras */
+  margin: 0 auto;
 }
 
-.about .watch-video i {
-  font-size: 2rem;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.about .watch-video a {
-  font-weight: 600;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-left: 8px;
-  transition: 0.3s;
-}
-
-.about .watch-video:hover a {
-  color: var(--accent-color);
-}
-
-.about .about-img {
-  min-height: 400px;
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .about .about-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 600px;
+/* Ajusta el diseño responsivo */
+@media (max-height: 700px) {
+  #about {
+    min-height: auto; /* En pantallas muy pequeñas, no fuerza altura completa */
+    padding-top: 80px;
   }
 }
 
-.about .about-img img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
+/* Si tienes problemas con el fondo, asegúrate de que cubra todo */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
+/* Ajusta la imagen para que no cause desplazamiento horizontal */
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px
+
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  color: unset;
+  background-color: unset;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: white;
+  position: relative;
+}
+
+h2.section-title {
+  margin-top: -15px; /* Reduce el margen inferior del título (ajusta este valor según necesites) */
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* Centra el contenedor */
+  margin-top: 30px;
+  width: 100%;
+  /* La siguiente línea es opcional, solo si necesitas que el contenedor tenga un ancho específico */
+  max-width: 400px; /* Ajusta según el espacio que quieras entre botones */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-service {
+  margin-right: 50px; /* Ajusta este valor para cambiar la separación */
+}
+
+.btn-project {
+  margin-left: 50px; /* Ajusta este valor para cambiar la separación */
+}
+
+.btn-service, .btn-project {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: white;
+  color: #FF7700;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-service:hover, .btn-project:hover {
+  background-color: #FF7700;
+  color: white;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.company-name {
+  color: white;
+  font-size: 1rem;
+  font-weight: 1000;
+  letter-spacing: 0.2em;
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .about .row {
+    flex-direction: column;
+  }
+  
+  .about-content, .about-image {
+    width: 100%;
+  }
+  
+  .about-image {
+    margin-top: 30px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# MISION Y VISION
+--------------------------------------------------------------*/
+/* Estilos generales */
+/* Estilos generales de la sección */
+.section-mision-vision {
+  background-color: #f5f1e9;
+  color: #222;
+  padding: 40px 0;
+}
+
+.container-mv {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Diseño en dos columnas */
+.row-mv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.col-6-mv {
+  flex: 1;
+}
+
+/* Títulos */
+.title-mv {
+  font-size: 22px;
+  font-weight: bold;
+  color: #658d2f;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Imagen */
+.image-container-mv {
+  position: relative;
+  width: 100%;
+}
+
+.image-container-mv img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Etiqueta "CAMER" */
+.tag-mv {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #f5f1e9;
+  color: #964b32;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de valores */
+.values-section-mv {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 3px solid #658d2f;
+}
+
+.values-mv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.value-item-mv {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 250px;
+}
+
+.value-item-mv h3 {
+  font-size: 22px;
+  color: #658d2f;
+  font-weight: bold;
+}
+
+.value-item-mv strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.value-item-mv p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row-mv {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .values-mv {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .value-item-mv {
+      width: 100%;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Stats Counter Section
