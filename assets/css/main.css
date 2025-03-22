@@ -2332,10 +2332,13 @@ h2.section-title {
   background-color: white;
   color: #FF7700;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 10px;
   font-weight: bold;
-  transition: all 0.3s ease;
-  border: none;
+  transition: all 0.3s ease;; 
+  font-size: 1.5rem;
+  font-weight: 1000;
+  
+  
 }
 
 .btn-service:hover, .btn-project:hover {
@@ -2349,8 +2352,8 @@ h2.section-title {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.company-name {
-  color: white;
+.company-name-1 {
+  color: var(white);
   font-size: 1rem;
   font-weight: 1000;
   letter-spacing: 0.2em;
@@ -2424,18 +2427,6 @@ h2.section-title {
   border-radius: 5px;
 }
 
-/* Etiqueta "CAMER" */
-.tag-mv {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #f5f1e9;
-  color: #964b32;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
 /* Sección de valores */
 .values-section-mv {
