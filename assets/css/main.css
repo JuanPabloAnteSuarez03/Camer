@@ -699,6 +699,12 @@ html, body {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
+/*Comienza Aeljandro */
+
+/* Ocultar los botones de redes sociales en la sección page-title */
+.page-title .social-icons {
+  display: none; /* Oculta los botones en la sección page-title */
+}
 
 .full-background {
   position: relative; /* Fija el fondo detrás del contenido */
@@ -849,25 +855,24 @@ html, body {
 }
 
 
-.benefits {
-  background-color: #F2F0EB;
-  padding: 50px 0;
-}
-
-.benefits h2 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #508100;
-  margin-bottom: 30px;
-}
-
-
 .row.gx-1 {
   column-gap: -1000px; /* Reduce el espacio horizontal entre columnas */
 }
 
 .row.gy-1 {
   row-gap: 10px; /* Reduce el espacio vertical entre filas */
+}
+
+.benefits-section{
+  background-color: #f2efe7 ;
+}
+
+.benefits-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--green-color); /* Cambia el color al verde definido en las variables */
+  margin-bottom: 30px;
+  text-align: center; /* Centra el texto */
 }
 
 .benefit-item {
@@ -881,13 +886,23 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px); /* Eleva el elemento ligeramente */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
 
 .benefit-icon {
-  width: 80px; /* Ajusta el tamaño del ícono */
-  height: 80px;
+  width: 120px; /* Ajusta el tamaño del ícono */
+  height: 120px;
   margin-right: 8px; /* Reduce el espacio entre la imagen y el texto */
   flex-shrink: 0;
+}
+
+.benefit-item:hover .benefit-icon {
+  filter: brightness(0.8); /* Oscurece ligeramente el ícono */
 }
 
 .benefit-item h4 {
@@ -925,13 +940,216 @@ html, body {
   margin-top: 30px;
 }
 
-.video-placeholder-benefits {
-  width: 100%;
-  max-width: 800px; /* Limita el ancho máximo del video */
-  height: 450px; /* Ajusta la altura del video */
+.video-container iframe {
+  width: 100%; /* El video ocupará el 100% del ancho del contenedor */
+  max-width: 1200px; /* Ancho máximo del video */
+  height: auto; /* Ajusta la altura proporcionalmente */
+  aspect-ratio: 16 / 9; /* Mantén la relación de aspecto */
   border-radius: 10px; /* Opcional: bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el video */
 }
+
+.projects-section {
+  background-color: #f2efe7; /* Fondo similar al de la imagen */
+  padding: 50px 0;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #590212; /* Color marrón */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.project-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los elementos */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 300px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.project-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #590212; /* Color marrón */
+  padding: 15px;
+}
+
+.project-item:hover {
+  transform: translateY(-5px); /* Eleva el elemento ligeramente */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .project-item img {
+    height: 200px; /* Reduce la altura de las imágenes en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .project-item img {
+    height: 200px; /* Reduce la altura de las imágenes en pantallas pequeñas */
+  }
+}
+
+.contact-section {
+  --background-color: #000000; /* Fondo negro */
+  --heading-color: var(--contrast-color); /* Color de los encabezados */
+  --default-color: var(--contrast-color); /* Color del texto */
+  color: var(--default-color); /* Aplica el color del texto */
+  background-color: var(--background-color); /* Fondo negro */
+  background: url("../img/footer-bg.jpg") top center no-repeat; /* Imagen de fondo */
+  background-position: center center; /* Centra la imagen */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  font-size: 14px; /* Tamaño de fuente */
+  padding: 50px 20px; /* Espaciado interno */
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* Asegura que esté detrás del contenido */
+}
+
+.contact-section > * {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #f2efe7; /* Fondo beige */
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  resize: none; /* Evita redimensionar el textarea */
+}
+
+.contact-form textarea {
+  grid-column: span 4; /* Ocupa las cuatro columnas */
+  height: 80px;
+}
+
+.contact-form button {
+  grid-column: span 4; /* Botón ocupa las cuatro columnas */
+  background-color: var(--coffe-color); /* Color marrón */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #8b3a1a; /* Marrón más oscuro */
+}
+
+.contact-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  background-color: #fff;
+  color: var(--coffe-color);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--coffe-color);
+  color: #fff;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icon {
+  background-color: var(--coffe-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #8b3a1a; /* Marrón más oscuro */
+}
+
+.contact-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-image img {
+  max-width: 200px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -3530,8 +3748,7 @@ h2.section-title {
 }
 
 .blog-comments .reply-form input:focus {
-  box-shadow: none;
-  border-color: var(--accent-color);
+  outline: none;
 }
 
 .blog-comments .reply-form textarea {
@@ -3545,8 +3762,7 @@ h2.section-title {
 }
 
 .blog-comments .reply-form textarea:focus {
-  box-shadow: none;
-  border-color: var(--accent-color);
+  outline: none;
 }
 
 .blog-comments .reply-form .form-group {
