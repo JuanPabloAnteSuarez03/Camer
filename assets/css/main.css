@@ -1009,7 +1009,7 @@ html, body {
   padding: 50px 0;
 }
 
-.titulo-proyectos {
+.projects-titles {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1018,14 +1018,14 @@ html, body {
 }
 
 
-.titulo-proyectos h2 {
+.projects-titles h2 {
   font-size: 50px;
   font-weight: 900;
   color: var(--coffe-color);
   margin: 0;
 }
 
-.logo-proyectos {
+.projects-logo {
   height: 80px;
   width: auto;
   object-fit: contain;
