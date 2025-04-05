@@ -69,7 +69,7 @@
 <section class="contact-section">
   <div class="container">
     <h2>Déjanos tus datos y un asesor se comunicará con usted.</h2>
-    <form action="submit_form.php" method="POST" class="contact-form">
+    <form id="contactForm" class="contact-form">
       <div class="form-group">
         <input type="text" name="name" placeholder="NOMBRE" required>
         <input type="tel" name="phone" placeholder="TELÉFONO" required>
@@ -77,6 +77,7 @@
         <input type="text" name="message" placeholder="MENSAJE" required>
       </div>
       <button type="submit" class="submit-btn">Enviar</button>
+      <div id="form-message" style="margin-top: 20px;"></div>
     </form>
     <div class="info-section">
       <h3>En Perforaciones Camer utilizamos maquinaria de última generación</h3>
@@ -152,6 +153,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
 
 </body>
 
