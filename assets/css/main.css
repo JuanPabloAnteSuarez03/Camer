@@ -688,72 +688,45 @@ html, body {
   font-weight: 500;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-/*Comienza Aeljandro */
+/*Comienza Alejandro*/
 
-/* Ocultar los botones de redes sociales en la sección page-title */
-.page-title .social-icons {
-  display: none; /* Oculta los botones en la sección page-title */
-}
+/* Intro Section */
 
 .full-background {
-  position: relative; /* Fija el fondo detrás del contenido */
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Ocupa toda la pantalla */
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1
-  
+  z-index: 1;
 }
 
-
-  /* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .full-background {
-    min-height: 70vh; /* Reduce la altura en dispositivos móviles */
-    background-position: top; /* Ajusta el enfoque de la imagen */
-  }
-
-  .page-title h1 {
-    font-size: 32px; /* Reduce el tamaño del título en móviles */
-  }
-}
-
-@media (max-width: 480px) {
-  .full-background {
-    min-height: 60vh; /* Aún más pequeño en móviles muy compactos */
-  }
-
-  .page-title h1 {
-    font-size: 28px;
-  }
-}
-  
 .header-logo {
-  position: relative; /* Mantiene el flujo normal del documento */
+  position: relative;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente (si es necesario) */
-  margin-bottom: 10px; /* Espacio entre el logo y el texto */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
   margin-top: -20px;
   z-index: 10;
 }
 
 .header-logo img {
-  width: 300px; /* Tamaño del logo */
+  width: 300px;
   height: auto;
   display: block;
 }
@@ -782,14 +755,77 @@ html, body {
 }
 
 .page-title-text p {
-  margin-top: -20px; /* Reduce el espacio superior */
-  margin-bottom: 5px; /* Reduce el espacio inferior */
-  padding-bottom: 0; /* Elimina el espacio extra */
-  font-size: 20px; /* Ajusta el tamaño de la fuente (antes era 220px, demasiado grande) */
+  max-width: 45%;
+  margin: -20px auto 5px auto; /* top, right/left (auto centra), bottom */
+  padding-bottom: 0;
+  font-size: 20px;
   font-weight: 400;
   line-height: 2;
-  position: relative;
+  text-align: center;
 }
+
+/* Ajustes RESPONSIVE */
+
+@media (max-width: 768px) {
+  .header-logo img {
+    width: 220px;
+    margin-top: 20px; /* Baja la imagen */
+  }
+
+  .page-title-text {
+    margin-top: 60px; /* Baja todo el bloque de texto */
+  }
+
+  .page-title-text h2 {
+    font-size: 64px;
+    margin-top: 10px; /* Espaciado adicional */
+    padding-bottom: 20px;
+  }
+
+  .page-title-text h3 {
+    font-size: 22px;
+    margin-top: 15px; /* Ajuste menor */
+    padding-bottom: 15px;
+  }
+
+  .page-title-text p {
+    font-size: 16px;
+    padding: 0 20px;
+    margin-top: 10px;
+    line-height: 1.8;
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo img {
+    width: 180px;
+    margin-top: 25px; /* Baja la imagen en pantallas más pequeñas */
+  }
+
+  .page-title-text {
+    margin-top: 30px;
+  }
+
+  .page-title-text h2 {
+    font-size: 48px;
+  }
+
+  .page-title-text h3 {
+    font-size: 20px;
+  }
+
+  .page-title-text p {
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 1.7;
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+
+/* Disposal Section */
 
 .disposal-content h3 {
   text-align: right; /* Alinea el texto a la derecha */
@@ -823,14 +859,12 @@ html, body {
   height: auto;
 }
 
-/* Contenedor de la imagen */
 .image-container-disposal {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 100%; /* Aumenta un poco el tamaño de la imagen */
+  margin: 0 auto;
 }
 
-/* Imagen principal */
 .image-container-disposal img.img-fluid {
   width: 100%;
   height: auto;
@@ -838,22 +872,29 @@ html, body {
   object-position: center;
 }
 
-/* Logo en la esquina inferior izquierda */
 .image-container-disposal .logo-overlay {
   position: absolute;
-  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
-  left: 10px; /* Ajusta la distancia desde la parte izquierda */
-  width: 120px; /* Aumenta el tamaño del logo */
+  bottom: 10px; /* Lo acerca más a la parte inferior */
+  left: 10px; /* Lo coloca más a la izquierda */
+  width: 120px; /* Tamaño más pequeño en pantallas grandes */
   height: auto;
-  z-index: 100; /* Asegura que el logo esté encima de la imagen */
-  display: block; /* Asegura que el logo sea visible */
+  z-index: 100;
 }
 
-.disposal-image {
-  width: 50%; /* Igual al ancho del contenedor de texto */
-  margin: 0 auto; /* Centra el contenedor de la imagen */
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .image-container-disposal {
+    max-width: 90%; /* Hace la imagen más grande en móviles */
+  }
+
+  .image-container-disposal .logo-overlay {
+    width: 80px; /* Reduce aún más el tamaño del logo */
+    bottom: 5px; /* Lo acerca más a la esquina inferior */
+    left: 5px;
+  }
 }
 
+/* Benefits Section */
 
 .row.gx-1 {
   column-gap: -1000px; /* Reduce el espacio horizontal entre columnas */
@@ -915,24 +956,34 @@ html, body {
 
 .benefits-description-two-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 20px; /* Espacio entre columnas */
+  grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+  gap: 20px;
   text-align: justify;
 }
 
+/* Estilos para columnas */
+.left-column, .right-column {
+  padding: 20px;
+}
+
 .left-column {
-  color: black; /* Texto blanco para contraste */
-  padding: 20px; /* Espaciado interno */
+  color: black;
 }
 
 .right-column {
-  color: var(--coffe-color); /* Fondo marrón para la columna derecha */
-  padding: 20px; /* Espaciado interno */
-} 
+  color: var(--coffe-color);
+}
 
 .right-column strong {
-  color: var(--coffe-color);
   font-weight: bold;
+  color: var(--coffe-color);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) { 
+  .benefits-description-two-columns {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
 }
 
 .video-container {
@@ -949,18 +1000,37 @@ html, body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el video */
 }
 
+
+/* Projects Section */
+
 .projects-section {
-  background-color: #f2efe7; /* Fondo similar al de la imagen */
+  background-color: #f2efe7; /* Fondo similar al de la imagen */ 
+  margin-top: -20px;
   padding: 50px 0;
 }
 
-.projects-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #590212; /* Color marrón */
-  margin-bottom: 30px;
-  text-align: center;
+.titulo-proyectos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 0 50px; /* menos padding arriba */
+  margin-bottom: 30px; /* separa del contenido que viene abajo */
 }
+
+
+.titulo-proyectos h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--coffe-color);
+  margin: 0;
+}
+
+.logo-proyectos {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 
 .projects-grid {
   display: grid;
@@ -1015,6 +1085,8 @@ html, body {
     height: 200px; /* Reduce la altura de las imágenes en pantallas pequeñas */
   }
 }
+
+/* Contact Section */
 
 .contact-section {
   --background-color: #000000; /* Fondo negro */
@@ -1149,6 +1221,26 @@ html, body {
   max-width: 200px; /* Ajusta el tamaño de la imagen */
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    grid-column: span 1; /* Ocupa toda la fila */
+  }
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Global Sections
