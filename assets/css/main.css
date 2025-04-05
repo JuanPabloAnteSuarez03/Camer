@@ -440,32 +440,114 @@ h6 {
 
 .contact-form .form-group {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  background-color: #eee5cd;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
-  width: 200px;
+  background-color: transparent;
+  color: #666;
+  flex: 1;
+  position: relative;
 }
 
-.contact-form textarea {
-  width: 420px;
-  resize: none;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #808080;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.contact-form input:not(:last-child),
+.contact-form textarea:not(:last-child) {
+  border-right: 1px solid #808080;
 }
 
 .submit-btn {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #ff6600;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e55d00;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0,.0.2);
+}
+
+/* Media queries para hacer el formulario responsivo */
+@media screen and (max-width: 889px) {
+  .contact-form .form-group {
+    display: block; /* Cambiar de flex a block */
+    width: 100%;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+  
+  /* Eliminar los separadores verticales */
+  .contact-form input:not(:last-child)::after,
+  .contact-form textarea:not(:last-child)::after {
+    display: none;
+  }
+  
+  /* Agregar separadores horizontales */
+  .contact-form input:not(:last-child),
+  .contact-form textarea:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Hacer que el botón ocupe menos ancho pero sea más visible */
+  .submit-btn {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 12px;
+  }
+  
+  /* Ajustar los botones */
+  .buttons .btn {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+  .contact-section {
+    padding: 20px 10px;
+  }
+  
+  .contact-section .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 12px;
+  }
 }
 
 .info-section {
