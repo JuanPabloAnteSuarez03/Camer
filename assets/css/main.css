@@ -1208,7 +1208,7 @@ html, body {
 
 
 .projects-titles h2 {
-  font-size: 50px;
+  font-size: 2.5rem;
   font-weight: 900;
   color: var(--coffe-color);
   margin: 0;
@@ -1255,54 +1255,42 @@ html, body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
 
+/* Ajustes para la sección de proyectos en pantallas pequeñas */
 @media (max-width: 768px) {
+  .projects-titles {
+    flex-direction: column-reverse; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos */
+    text-align: center; /* Centra el texto */
+    padding: 5px 10px; /* Reduce el padding general */
+    margin-top: -20px; /* Acerca el título al video */
+  }
+
+  .projects-logo {
+    margin-bottom: 5px; /* Reduce el espacio debajo del logo */
+    height: 50px; /* Ajusta el tamaño del logo */
+    width: auto;
+  }
+
+  .projects-titles h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
+    margin-top: 0; /* Elimina el margen superior */
+  }
+
   .projects-grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    gap: 15px; /* Ajusta el espacio entre los elementos */
   }
 
   .project-item img {
-    height: 200px; /* Reduce la altura de las imágenes en pantallas pequeñas */
+    height: auto; /* Permite que las imágenes se ajusten automáticamente */
+    max-height: 200px; /* Limita la altura máxima */
   }
 }
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
 
-  .project-item img {
-    height: 200px; /* Reduce la altura de las imágenes en pantallas pequeñas */
-  }
-}
+
 
 /* Contact Section */
-
-.contact-section {
-  --background-color: #000000; /* Fondo negro */
-  --heading-color: var(--contrast-color); /* Color de los encabezados */
-  --default-color: var(--contrast-color); /* Color del texto */
-  color: var(--default-color); /* Aplica el color del texto */
-  background-color: var(--background-color); /* Fondo negro */
-  background: url("../img/footer-bg.jpg") top center no-repeat; /* Imagen de fondo */
-  background-position: center center; /* Centra la imagen */
-  background-size: cover; /* Asegura que la imagen cubra toda la sección */
-  font-size: 14px; /* Tamaño de fuente */
-  padding: 50px 20px; /* Espaciado interno */
-  position: relative;
-}
-
-.contact-section::before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-  position: absolute;
-  inset: 0;
-  z-index: 0; /* Asegura que esté detrás del contenido */
-}
-
-.contact-section > * {
-  position: relative;
-  z-index: 1; /* Asegura que el contenido esté encima del fondo */
-}
 
 .social-icons {
   position: absolute;
