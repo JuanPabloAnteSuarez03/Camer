@@ -1288,18 +1288,17 @@ html, body {
 }
 
 
-
-
 /* Contact Section */
 
 .social-icons {
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 1000;
 }
 
 .social-icon {
@@ -1320,6 +1319,14 @@ html, body {
   background-color: #8b3a1a; /* Marrón más oscuro */
 }
 
+.footer .social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  flex-direction: row; /* Alineación horizontal en el footer */
+  justify-content: center;
+  gap: 15px;
+}
 
 @media screen and (max-width: 768px) {
 
