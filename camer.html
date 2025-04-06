@@ -226,22 +226,30 @@
       </div>
     </section>
 
-    <section class="contact-section" data-aos="fade-up" data-aos-delay="90">
+    <section class="contact-section">
       <div class="container">
-        <h3 class="contact-title">DÉJANOS TUS DATOS Y UN ASESOR SE COMUNICARÁ CON USTED.</h3>
-        <form class="contact-form">
-          <input type="text" placeholder="NOMBRE" name="name" required>
-          <input type="tel" placeholder="TELÉFONO" name="phone" required>
-          <input type="email" placeholder="EMAIL" name="email" required>
-          <textarea placeholder="MENSAJE" name="message" required></textarea>
-          <button type="submit">ENVIAR</button>
+        <h2>Déjanos tus datos y un asesor se comunicará con usted.</h2>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="NOMBRE" required>
+            <input type="tel" name="phone" placeholder="TELÉFONO" required>
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <input type="text" name="message" placeholder="MENSAJE" required>
+          </div>
+          <button type="submit" class="submit-btn">Enviar</button>
+          <div id="form-message" style="margin-top: 20px;"></div>
         </form>
-        <div class="contact-buttons">
-          <button class="contact-btn">SERVICIOS</button>
-          <button class="contact-btn">NUESTROS PROYECTOS</button>
-          <button class="contact-btn">QUIENES SOMOS</button>
+        <div class="info-section">
+          <h3>En Perforaciones Camer utilizamos maquinaria de última generación</h3>
+          <h1>SOLUCIONES RÁPIDAS Y EFICACES EN CALI Y EN TODO EL PAÍS.</h1>
+          <div class="buttons">
+            <a href="services.html" class="btn">Servicios</a>
+            <a href="projects.html" class="btn">Nuestros Proyectos</a>
+            <a href="about.html" class="btn">Quienes Somos</a>
+          </div>
         </div>
       </div>
+
       <div class="social-icons">
         <!-- Instagram -->
         <a href="https://www.instagram.com/diego_cadena_ingenieria/?hl=es-la" target="_blank" class="social-icon" title="Instagram">
@@ -259,6 +267,8 @@
       </a>
       </div>
     </section>  
+
+    </section> 
   </main>
 
   <footer id="footer" class="footer">
@@ -283,11 +293,7 @@
         <div class="col-lg-6 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-<<<<<<< HEAD
             <li><a href="#">Inicio</a></li>
-=======
-            <li><a href="index.html">Inicio</a></li>
->>>>>>> main
             <li><a href="about.html">Quienes somos</a></li>
             <li><a href="services.html">Servicios</a></li>
             <li><a href="camer.html">Camer</a></li>
@@ -329,6 +335,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
 
 </body>
 

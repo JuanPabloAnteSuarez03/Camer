@@ -417,6 +417,7 @@ h6 {
   padding: 50px 0;
   color: #fff;
   text-align: center;
+  margin-top: 0px;
 }
 
 .contact-section .container {
@@ -1303,75 +1304,6 @@ html, body {
   z-index: 1; /* Asegura que el contenido esté encima del fondo */
 }
 
-.contact-title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background-color: #f2efe7; /* Fondo beige */
-  border: none;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  resize: none; /* Evita redimensionar el textarea */
-}
-
-.contact-form textarea {
-  grid-column: span 4; /* Ocupa las cuatro columnas */
-  height: 80px;
-}
-
-.contact-form button {
-  grid-column: span 4; /* Botón ocupa las cuatro columnas */
-  background-color: var(--coffe-color); /* Color marrón */
-  color: #fff;
-  border: none;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #8b3a1a; /* Marrón más oscuro */
-}
-
-.contact-buttons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.contact-btn {
-  background-color: #fff;
-  color: var(--coffe-color);
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-  background-color: var(--coffe-color);
-  color: #fff;
-}
-
 .social-icons {
   position: absolute;
   top: 50%;
@@ -1400,26 +1332,19 @@ html, body {
   background-color: #8b3a1a; /* Marrón más oscuro */
 }
 
-.contact-image {
-  text-align: center;
-  margin-top: 20px;
+
+@media screen and (max-width: 768px) {
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+  }
 }
 
-.contact-image img {
-  max-width: 200px; /* Ajusta el tamaño de la imagen */
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .contact-form {
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
-  }
-
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    grid-column: span 1; /* Ocupa toda la fila */
-  }
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
 
   .social-icons {
     position: static;
