@@ -65,99 +65,31 @@
     </a>
   </header>
   
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
-      <div class="container position-relative">
-        <h1>Contáctanos</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Inicio</a></li>
-            <li class="current">Contáctanos</li>
-          </ol>
-        </nav>
+<!-- Form and Buttons Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Déjanos tus datos y un asesor se comunicará con usted.</h2>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="NOMBRE" required>
+        <input type="tel" name="phone" placeholder="TELÉFONO" required>
+        <input type="email" name="email" placeholder="EMAIL" required>
+        <input type="text" name="message" placeholder="MENSAJE" required>
       </div>
-    </div><!-- End Page Title -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Dirección</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Llámanos</h3>
-              <p>+57 317 520 7436</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Correos</h3>
-              <p>gerencia@diegocadenaingenieria.com</p>
-              <p>ingdiegocadena@yahoo.com</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 200%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
-
-          <!-- <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>End Contact Form -->
-
-        </div>
-
+      <button type="submit" class="submit-btn">Enviar</button>
+      <div id="form-message" style="margin-top: 20px;"></div>
+    </form>
+    <div class="info-section">
+      <h3>En Perforaciones Camer utilizamos maquinaria de última generación</h3>
+      <h1>SOLUCIONES RÁPIDAS Y EFICACES EN CALI Y EN TODO EL PAÍS.</h1>
+      <div class="buttons">
+        <a href="services.html" class="btn">Servicios</a>
+        <a href="projects.html" class="btn">Nuestros Proyectos</a>
+        <a href="about.html" class="btn">Quienes Somos</a>
       </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
+    </div>
+  </div>
+</section>
 
   <footer id="footer" class="footer">
     <div class="container footer-top">
@@ -221,6 +153,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
 
 </body>
 
