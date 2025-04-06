@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Scroll Effects CSS -->
+  <link href="assets/css/scroll-effects.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -68,50 +70,50 @@
   </header>
   
 <!-- Form and Buttons Section -->
-<section class="contact-section">
+<section class="contact-section" data-aos="fade-in">
   <div class="container">
-    <h2>Déjanos tus datos y un asesor se comunicará con usted.</h2>
-    <form id="contactForm" class="contact-form">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="NOMBRE" required>
-        <input type="tel" name="phone" placeholder="TELÉFONO" required>
-        <input type="email" name="email" placeholder="EMAIL" required>
-        <input type="text" name="message" placeholder="MENSAJE" required>
+    <h2 class="reveal-text">Déjanos tus datos y un asesor se comunicará con usted.</h2>
+    <form id="contactForm" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+      <div class="form-group stagger-container">
+        <input type="text" name="name" placeholder="NOMBRE" required class="stagger-item fade-in-left">
+        <input type="tel" name="phone" placeholder="TELÉFONO" required class="stagger-item fade-in-left">
+        <input type="email" name="email" placeholder="EMAIL" required class="stagger-item fade-in-left">
+        <input type="text" name="message" placeholder="MENSAJE" required class="stagger-item fade-in-left">
       </div>
-      <button type="submit" class="submit-btn">Enviar</button>
+      <button type="submit" class="submit-btn hover-scale">Enviar</button>
       <div id="form-message" style="margin-top: 20px;"></div>
     </form>
-    <div class="info-section">
-      <h3>En Perforaciones Camer utilizamos maquinaria de última generación</h3>
-      <h1>SOLUCIONES RÁPIDAS Y EFICACES EN CALI Y EN TODO EL PAÍS.</h1>
-      <div class="buttons">
-        <a href="services.html" class="btn">Servicios</a>
-        <a href="projects.html" class="btn">Nuestros Proyectos</a>
-        <a href="about.html" class="btn">Quienes Somos</a>
+    <div class="info-section" data-aos="fade-up" data-aos-delay="400">
+      <h3 class="reveal-text">En Perforaciones Camer utilizamos maquinaria de última generación</h3>
+      <h1 class="reveal-text">SOLUCIONES RÁPIDAS Y EFICACES EN CALI Y EN TODO EL PAÍS.</h1>
+      <div class="buttons stagger-container">
+        <a href="services.html" class="btn stagger-item hover-scale">Servicios</a>
+        <a href="projects.html" class="btn stagger-item hover-scale">Nuestros Proyectos</a>
+        <a href="about.html" class="btn stagger-item hover-scale">Quienes Somos</a>
       </div>
     </div>
   </div>
 
-  <div class="social-icons">
+  <div class="social-icons stagger-container">
     <!-- Instagram -->
-    <a href="https://www.instagram.com/diego_cadena_ingenieria/?hl=es-la" target="_blank" class="social-icon" title="Instagram">
+    <a href="https://www.instagram.com/diego_cadena_ingenieria/?hl=es-la" target="_blank" class="social-icon stagger-item hover-scale" title="Instagram" data-aos="zoom-in" data-aos-delay="100">
       <i class="fab fa-instagram"></i>
     </a>
     
     <!-- Facebook -->
-    <a href="https://web.facebook.com/p/Perforaciones-CAMER-100063545877248/?_rdc=1&_rdr" target="_blank" class="social-icon" title="Facebook">
+    <a href="https://web.facebook.com/p/Perforaciones-CAMER-100063545877248/?_rdc=1&_rdr" target="_blank" class="social-icon stagger-item hover-scale" title="Facebook" data-aos="zoom-in" data-aos-delay="200">
       <i class="fab fa-facebook-f"></i>
     </a>
     
   <!-- Teléfono -->
-  <a href="tel:+573162552802" class="social-icon" title="Teléfono">
+  <a href="tel:+573162552802" class="social-icon stagger-item hover-scale" title="Teléfono" data-aos="zoom-in" data-aos-delay="300">
     <i class="fas fa-phone-alt"></i>
   </a>
   </div>
 
 </section>
 
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" data-aos="fade-up" data-aos-delay="300">
     <div class="container footer-top">
       <div class="row gy-4">
         
@@ -174,6 +176,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/contact.js"></script>
+  <!-- Scroll Effects JS -->
+  <script src="assets/js/scroll-effects.js"></script>
 
 </body>
 

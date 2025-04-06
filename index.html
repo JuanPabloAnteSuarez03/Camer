@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Scroll Effects CSS -->
+  <link href="assets/css/scroll-effects.css" rel="stylesheet">
 
 </head>
 
@@ -68,9 +70,9 @@
       <div class="info d-flex align-items-center">
         <div class="container">
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-6 text-center hero-overlay"> <!-- Contenedor extra -->
-              <h2>BIENVENIDOS A DIEGO CADENA INGENIERÍAS S.A.S</h2>
-              <p>Con más de 25 años en el sector de la construcción, somos expertos en diseño y ejecución de proyectos civiles y estructurales. Nuestro equipo de ingenieros altamente capacitados se especializa en ofrecer soluciones integrales, enfocadas en la innovación, calidad y eficiencia.</p>
+            <div class="col-lg-6 text-center hero-overlay parallax-scroll" data-speed="0.3"> <!-- Contenedor extra -->
+              <h2 class="reveal-text">BIENVENIDOS A DIEGO CADENA INGENIERÍAS S.A.S</h2>
+              <p data-aos="fade-up" data-aos-delay="300">Con más de 25 años en el sector de la construcción, somos expertos en diseño y ejecución de proyectos civiles y estructurales. Nuestro equipo de ingenieros altamente capacitados se especializa en ofrecer soluciones integrales, enfocadas en la innovación, calidad y eficiencia.</p>
             </div>
           </div>
         </div>
@@ -78,19 +80,19 @@
 
     
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-item">
+        <div class="carousel-item" data-aos="fade-in" data-aos-delay="100">
           <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="Edificio en construcción">
         </div>
         <div class="carousel-item active">
           <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="Constructores">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-aos="fade-in" data-aos-delay="100">
           <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="Ingenieros">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-aos="fade-in" data-aos-delay="100">
           <img src="assets/img/hero-carousel/hero-carousel-4.jpg" alt="Trabajadores de construcción">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-aos="fade-in" data-aos-delay="100">
           <img src="assets/img/hero-carousel/hero-carousel-5.jpg" alt="Edificio moderno">
         </div>
     
@@ -110,11 +112,11 @@
     <section id="servicios" class="py-10 bg-[#F1E7D8] seccion-servicios">
       <button class="camer-button" onclick="window.location.href='camer.html'">CAMER</button>
       <div class="container mx-auto text-center bg-[#D1C4B2] p-10 rounded-lg">
-        <h2 class="text-5xl font-bold text-[#8A4B23] mb-10 servicios-title">Servicios</h2>
+        <h2 class="text-5xl font-bold text-[#8A4B23] mb-10 servicios-title reveal-text">Servicios</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container-servicios">
           
           <!-- Construcción y r emodelación de edificaciones -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-10.png" alt="Construcción" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Construcción y remodelación de edificaciones:
@@ -125,7 +127,7 @@
           </div>
           
           <!-- Instalaciones hidrosanitarias -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-12.png" alt="Instalaciones hidrosanitarias" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Instalaciones hidrosanitarias y redes de acueducto y alcantarillado:
@@ -136,7 +138,7 @@
           </div>
     
           <!-- Sistemas de suministro y tratamiento de agua potable -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-11.png" alt="Sistemas de agua potable" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Sistemas de suministro y tratamiento de agua potable:
@@ -147,7 +149,7 @@
           </div>
     
           <!-- Diseño de redes de servicios públicos -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-14.jpg" alt="Redes de servicios públicos" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Diseño de redes de servicios públicos:
@@ -158,7 +160,7 @@
           </div>
     
           <!-- Interventoría de obras -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-09.png" alt="Interventoría de obras" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Interventoría de obras:
@@ -169,7 +171,7 @@
           </div>
     
           <!-- Consultoría en diseño estructural -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-07.png" alt="Consultoría en diseño estructural" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Consultoría en diseño estructural:
@@ -180,7 +182,7 @@
           </div>
     
           <!-- Diseño estructural -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-08.png" alt="Diseño estructural" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Diseño estructural:
@@ -191,7 +193,7 @@
           </div>
     
           <!-- Perforación Horizontal Dirigida -->
-          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md">
+          <div class="servicio-card border border-[#8A4B23] rounded-lg p-6 bg-white shadow-md hover-scale">
             <img src="assets/img/ICONOS-15.png" alt="Perforación Horizontal Dirigida" class="mx-auto w-12 h-12 mb-4 images-servicios">
             <h3 class="text-xl font-semibold text-[#8A4B23] mb-2 all-services-title">
               Perforación Horizontal Dirigida:
@@ -308,7 +310,7 @@
   <!-- Sección de contacto con mapa -->
   <section class="contacto-section">
     <div class="container">
-      <div class="contacto-header">
+      <div class="contacto-header" data-aos="fade-up">
         <h2 class="contacto-title">Contáctanos</h2>
         <p class="contacto-subtitle">Estamos a tu servicio</p>
       </div>
@@ -447,6 +449,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Scroll Effects JS -->
+  <script src="assets/js/scroll-effects.js"></script>
 
 </body>
 

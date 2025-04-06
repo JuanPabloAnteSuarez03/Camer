@@ -534,10 +534,11 @@ h6 {
   }
 }
 
+
 /* Ajustes para pantallas muy pequeñas */
 @media screen and (max-width: 480px) {
   .contact-section {
-    padding: 20px 10px;
+    padding: 200px 10px;
   }
   
   .contact-section .container {
@@ -1383,24 +1384,11 @@ section,
   font-size: 32px;
   font-weight: 700;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.section-title h2:before,
-.section-title h2:after {
-  content: "";
-  width: 80%;
-  height: 2px;
-  background: var(--accent-color);
-  display: an;
-}
-
-.section-title h2:before {
-  margin: 0 15px 10px 0;
-}
-
-.section-title h2:after {
-  margin: 0 0 10px 15px;
-}
 
 .section-title p {
   margin-bottom: 0;
@@ -1483,9 +1471,25 @@ section,
   height: 4px;
   background: var(--accent-color);
   left: 0;
-  right: 0;
+  right: 10rem;
   bottom: 0;
+  top: 15rem;
   margin: auto;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .hero .info h2:after {
+    bottom: -15px; /* Ajusta según necesites */
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .hero .info h2:after {
+    bottom: -10px; /* Ajusta según necesites */
+    width: 60px; /* Opcionalmente reduce el ancho */
+  }
 }
 
 @media (max-width: 768px) {
@@ -2076,6 +2080,12 @@ section,
   position: relative;
   color: var(--coffe-color);
   font-family: var(--heading-font);
+}
+
+@media (max-width: 404px) {
+  .servicios-title {
+    font-size: 52px;
+  }
 }
 
 .all-services-title {
