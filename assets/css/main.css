@@ -414,7 +414,7 @@ h6 {
 .contact-section {
   margin-top: 100px;
   background: url('../img/footer-bg.jpg') no-repeat center center/cover;
-  padding: 50px 0;
+  padding: 150px 0;
   color: #fff;
   text-align: center;
   margin-top: 0px;
@@ -2205,11 +2205,12 @@ body {
   padding-right: 15px;
 }
 
+/* Agrega estas modificaciones a tu CSS existente */
 .proyecto-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
-  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  height: 200px; /* Altura fija para todas las tarjetas */
   border: 1px solid var(--coffe-color);
   border-radius: 0;
   overflow: hidden;
@@ -2220,15 +2221,24 @@ body {
 }
 
 .proyecto-card img {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
+  width: 50% !important; /* Forzar ancho exacto */
+  height: 200px !important; /* Forzar altura exacta */
+  object-fit: fill !important; /* Estirar para llenar el espacio */
+  min-width: 50% !important; /* Asegurar ancho mínimo */
+  max-width: 50% !important; /* Asegurar ancho máximo */
+  flex: 0 0 50% !important; /* Impedir que crezca o se encoja */
 }
 
 .proyecto-card p {
   margin: 8px 16px;
   color: #555;
   font-size: 1.1rem;
+  /* Limitar el texto para mantener tamaños consistentes */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limita a 4 líneas de texto */
+  -webkit-box-orient: vertical;
+  height: calc(100% - 16px); /* Altura ajustada al contenedor */
 }
 
 .proyecto-card strong {
@@ -4372,4 +4382,48 @@ h2.section-title {
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Proyectos Section II
+--------------------------------------------------------------*/
+
+.proyectos-container-full{
+  padding: 10rem 0;
+  max-width: 1200px;
+  margin: auto;  
+}
+.container-boton {
+  display: flex;
+  justify-content: flex-end; /* Alinea a la derecha */
+  width: 100%;              /* ¡Ojo! 200% suele provocar que el botón se salga de pantalla */
+  padding: 20px 0;
+}
+
+/* Estilos del botón */
+.btn-proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #A64B1D;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-proyectos:hover {
+  background-color: #D76B3D;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-proyectos .flecha {
+  font-size: 28px;
+  font-weight: bold;
 }
