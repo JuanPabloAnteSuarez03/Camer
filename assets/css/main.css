@@ -288,10 +288,17 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 30px; /* Cambiado de 10px a 0 */
     cursor: pointer;
     transition: color 0.3s;
+    position: absolute; /* Añadido posicionamiento absoluto */
+    right: 15px; /* Fija la posición desde la derecha */
+    top: 50%; /* Posiciona verticalmente al centro */
+    transform: translateY(-50%); /* Ajusta para centrado vertical perfecto */
   }
+
+
+
 
   .navmenu {
     padding: 0;
@@ -406,6 +413,13 @@ h6 {
     display: block;
   }
 }
+
+@media (max-width: 425px) {
+  .mobile-nav-toggle{
+    margin-right: 0;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Contact Section
