@@ -1473,17 +1473,21 @@ section,
   left: 0;
   right: 10rem;
   bottom: 0;
-  top: 15rem;
+  top: 17rem;
   margin: auto;
 }
 
 /* Para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 1054px) {
   .hero .info h2:after {
-    bottom: -15px; /* Ajusta según necesites */
+    bottom: -60px; /* Ajusta según necesites */
   }
 }
-
+@media (max-width: 991px) {
+  .hero .info h2:after {
+    top: 100px; /* Ajusta según necesites */
+  }
+}
 /* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .hero .info h2:after {
@@ -1491,12 +1495,59 @@ section,
     width: 60px; /* Opcionalmente reduce el ancho */
   }
 }
-
-@media (max-width: 768px) {
-  .hero .info h2 {
-    font-size: 36px;
+@media (max-width: 880px) {
+  .hero .info h2:after {
+    bottom: -110px;
   }
+
 }
+@media (max-width: 768px) {
+  .hero .info h2:after {
+    bottom: -100px;
+  }
+
+}
+
+@media (max-width: 712px) {
+  .hero .info h2:after {
+    bottom: -150px;
+  }
+
+}
+
+@media (max-width: 636px) {
+  .hero .info h2:after {
+    bottom: -200px;
+  }
+
+}
+@media (max-width: 425px) {
+  .hero .info h2 {
+    font-size: 30px;
+  }
+  .hero .info h2:after {
+    bottom: -50px;
+    left: 30px;
+  }
+
+}
+@media (max-width: 375px) {
+  .hero .info h2:after {
+    bottom: -60px;
+    left: 8px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .hero .info h2:after {
+    bottom: -60px;
+    left: 0px;
+  }
+
+}
+
+
 
 .hero .info p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -2537,7 +2588,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Parallax en escritorio */
 }
 
 .estadisticas-container {
@@ -2587,7 +2638,6 @@ body {
   .estadisticas-title::before,
   .estadisticas-title::after {
     display: none; /* Oculta completamente los elementos */
-    /* Alternativamente puedes usar: width: 0; */
   }
 }
 
@@ -2608,11 +2658,11 @@ body {
 }
 
 .estadistica-card {
-  background-color: white;
+  background-color: #fff;
   padding: 1.5rem;
   min-width: 200px;
   display: flex;
-  align-items: flex-start; /* Cambiado de center a flex-start */
+  align-items: flex-start;
   border-radius: 0;
 }
 
@@ -2654,7 +2704,7 @@ body {
 }
 
 .estadistica-texto {
-  color: #000000;
+  color: #000;
   font-size: 1.2rem;
   margin: 0;
   line-height: 1.2;
@@ -2683,23 +2733,62 @@ body {
   height: 100px;
 }
 
+/*=============================================
+=            MEDIA QUERIES                   =
+=============================================*/
+
+/* 1) Evitar problemas con background-attachment: fixed en móviles */
 @media (max-width: 768px) {
+  .estadisticas-section {
+    background-attachment: scroll;
+  }
+
+  /* 2) Reducir márgenes y padding en contenedor */
+  .estadisticas-container {
+    margin: 5rem auto 2rem auto; /* Ajusta según tu preferencia */
+    padding: 2rem 1rem;
+  }
+
+  /* Ajustar título en pantallas medianas */
+  .estadisticas-title {
+    font-size: 2rem;
+  }
+
+  /* Ajustar la rejilla y centrar tarjetas en pantallas medianas */
   .estadisticas-grid {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .estadistica-card {
     width: 100%;
     max-width: 300px;
   }
-  
+
+  /* Footer apilado */
   .estadisticas-footer {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 }
+
+/* 3) Ajustes adicionales para pantallas muy pequeñas (max-width: 500px) */
+@media (max-width: 500px) {
+  .estadistica-card {
+    min-width: auto; /* Permite que se adapte al 100% */
+    width: 100%;
+  }
+
+  .estadistica-icon img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
