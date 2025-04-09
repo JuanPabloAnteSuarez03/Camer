@@ -2512,12 +2512,36 @@ body {
   border-color: var(--coffe-color);
   padding: 2rem;
   width: 30%;
+  min-width: 500px;           /* Evita que la tarjeta sea más pequeña de 280px */
+  min-height: 320px;         /* Fija un alto mínimo para prevenir que el contenido se desborde */
   min-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 405px) {
+  .contacto-card {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */ 
+
+  }
+}
+
+@media (max-width: 365px) {
+  .contacto-card {
+    font-size: 0.7rem; /* Ajusta el tamaño del texto */ 
+    
+  }
+}
+
+@media (max-width: 1210px) {
+  .contacto-card {
+    width: 100%;
+    min-width: 100%;         /* Evita que la tarjeta sea más pequeña de 100% */
+    margin-bottom: 2rem; /* Espacio entre tarjetas */
+  }
 }
 
 .contacto-card:hover {
@@ -2551,10 +2575,25 @@ body {
 }
 
 .contacto-info p {
-  color: var(--coffe-color);
-  line-height: 1.5;
-  font-size: 1.1rem;
-  font-weight: 700;
+  position: relative;       /* Necesario para colocar la viñeta con position:absolute */
+  margin: 0.5rem 0;        /* Ajusta el espaciado vertical */
+  padding-left: 1rem;    /* Deja espacio a la izquierda para la viñeta */
+}
+
+.contacto-info p::before {
+  content: "•";             /* El carácter de la viñeta */
+  position: absolute;
+  left: 0;                  /* Ubica la viñeta al inicio de la línea */
+  color: var(--coffe-color);/* Color de la viñeta (ajústalo a tu gusto) */
+  font-weight: bold;
+  font-size: 1.5rem;       /* Tamaño de la viñeta (ajústalo a tu gusto) */
+  line-height: 1.3;        /* Alinea la viñeta con el texto */
+}
+
+@media (max-width: 365px) {
+  .contacto-info p::before {
+    line-height: 1;
+  }
 }
 
 .mapa-container {
@@ -4539,4 +4578,22 @@ h2.section-title {
 .btn-proyectos .flecha {
   font-size: 28px;
   font-weight: bold;
+}
+
+
+p.mt-3 {
+  /* Conviertes el párrafo en un contenedor flexible */
+  display: flex;
+  align-items: flex-start; /* Alinea el texto arriba */
+}
+
+p.mt-3 strong {
+  margin-right: 0.2rem; /* Separación horizontal entre "Celular:" y los números */
+}
+
+p.mt-3 span {
+  /* Coloca cada número en su propia línea dentro del span */
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem; /* Ajusta el espacio vertical entre los números */
 }

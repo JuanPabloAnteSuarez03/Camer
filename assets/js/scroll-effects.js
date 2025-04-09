@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS with custom settings
     AOS.init({
-        duration: 1000,
+        duration: 2000,
         easing: 'ease-in-out',
         once: true,  // Ahora los elementos permanecen visibles después de aparecer
         mirror: false, // No revertir animaciones al scrollear hacia arriba
@@ -69,28 +69,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const countObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const countElement = entry.target;
-                    const targetCount = parseInt(countElement.getAttribute('data-count'));
-                    const duration = 2000; // ms
-                    let startTime = null;
-
-                    function animateCount(timestamp) {
-                        if (!startTime) startTime = timestamp;
-                        const progress = timestamp - startTime;
-                        const percentage = Math.min(progress / duration, 1);
-                        const currentCount = Math.floor(percentage * targetCount);
-                        
-                        countElement.textContent = currentCount;
-                        
-                        if (percentage < 1) {
-                            requestAnimationFrame(animateCount);
-                        } else {
-                            countElement.textContent = targetCount;
-                            observer.unobserve(countElement);
-                        }
-                    }
+                    const container = entry.target;
+                    const valueNumber = container.querySelector('.value-number');
                     
-                    requestAnimationFrame(animateCount);
+                    if (valueNumber) {
+                        const targetCount = parseInt(valueNumber.getAttribute('data-count'));
+                        const duration = 800; // ms - Velocidad aumentada
+                        let startTime = null;
+
+                        function animateCount(timestamp) {
+                            if (!startTime) startTime = timestamp;
+                            const progress = timestamp - startTime;
+                            const percentage = Math.min(progress / duration, 1);
+                            const currentCount = Math.floor(percentage * targetCount);
+                            
+                            // Formatea el número para que siempre tenga 2 dígitos
+                            const formattedCount = String(currentCount).padStart(2, '0');
+                            valueNumber.textContent = formattedCount;
+                            
+                            if (percentage < 1) {
+                                requestAnimationFrame(animateCount);
+                            } else {
+                                // Formatea el número final para que siempre tenga 2 dígitos
+                                const formattedFinalCount = String(targetCount).padStart(2, '0');
+                                valueNumber.textContent = formattedFinalCount;
+                                observer.unobserve(container);
+                            }
+                        }
+                        
+                        requestAnimationFrame(animateCount);
+                    }
                 }
             });
         }, { threshold: 0.5 });
