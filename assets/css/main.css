@@ -1590,6 +1590,8 @@ section,
   inset: 0;
   position: absolute;
   overflow: hidden;
+  transition: none !important;
+  animation: none !important;
 }
 
 .hero .carousel-item {
@@ -1599,7 +1601,10 @@ section,
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  transition-duration: 0.4s;
+  transition: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .hero .carousel-item img {
