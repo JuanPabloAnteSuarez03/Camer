@@ -418,8 +418,17 @@ h6 {
   .mobile-nav-toggle{
     margin-right: 0;
   }
+  
 }
 
+@media (max-width: 320px) {
+  .mobile-nav-toggle{
+    margin-right: -10px;
+  }
+  .header .logo h1{
+    font-size: 12px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -4602,3 +4611,4 @@ p.mt-3 span {
   flex-direction: column;
   gap: 0.25rem; /* Ajusta el espacio vertical entre los números */
 }
+
