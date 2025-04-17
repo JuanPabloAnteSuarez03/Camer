@@ -1230,9 +1230,11 @@ html, body {
 /* Projects Section */
 
 .projects-section {
-  background-color: #f2efe7; /* Fondo similar al de la imagen */ 
+  background-color: #ffffff; /* Changed from #f2efe7 to white */
   margin-top: -20px;
   padding: 50px 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .projects-titles {
@@ -1271,6 +1273,7 @@ html, body {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
 }
 
 .project-item img {
@@ -1283,8 +1286,16 @@ html, body {
 .project-item p {
   font-size: 1rem;
   font-weight: bold;
-  color: #590212; /* Color marrón */
   padding: 15px;
+  min-height: 70px; /* Ensure space for descriptions */
+  color: black; /* Text color for description */
+}
+
+.project-item p strong {
+  color: #a0441c; /* Color for the title part */
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
 }
 
 .project-item:hover {
