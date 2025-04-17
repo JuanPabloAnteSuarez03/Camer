@@ -1284,7 +1284,25 @@ html, body {
   border: 1px solid #E67817; /* Añadir borde naranja que coincide con el color del header */
 }
 
+.project-item-1{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los elementos */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  border: 1px solid #E67817; /* Añadir borde naranja que coincide con el color del header */
+}
+
 .project-item img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 300px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.project-item-1 img {
   width: 100%; /* Ocupa todo el ancho del contenedor */
   height: 300px; /* Altura fija para todas las imágenes */
   object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
@@ -1299,6 +1317,14 @@ html, body {
   color: black; /* Text color for description */
 }
 
+.project-item-1 p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  min-height: 70px; /* Ensure space for descriptions */
+  color: black; /* Text color for description */
+}
+
 .project-item p strong {
   color: #a0441c; /* Color for the title part */
   display: block;
@@ -1306,7 +1332,19 @@ html, body {
   font-size: 1.1rem;
 }
 
+.project-item-1 p strong {
+  color: #a0441c; /* Color for the title part */
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
 .project-item:hover {
+  transform: translateY(-5px); /* Eleva el elemento ligeramente */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+.project-item-1:hover {
   transform: translateY(-5px); /* Eleva el elemento ligeramente */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
@@ -1338,6 +1376,11 @@ html, body {
   }
 
   .project-item img {
+    height: auto; /* Permite que las imágenes se ajusten automáticamente */
+    max-height: 200px; /* Limita la altura máxima */
+  }
+
+  .project-item-1 img {
     height: auto; /* Permite que las imágenes se ajusten automáticamente */
     max-height: 200px; /* Limita la altura máxima */
   }
