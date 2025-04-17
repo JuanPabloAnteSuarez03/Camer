@@ -1230,11 +1230,18 @@ html, body {
 /* Projects Section */
 
 .projects-section {
-  background-color: #ffffff; /* Changed from #f2efe7 to white */
+  background-color: #f2efe7; /* Changed from #f2efe7 to white */
   margin-top: -20px;
   padding: 50px 0;
-  margin-left: 20px;
-  margin-right: 20px;
+
+}
+
+.projects-section-1 {
+  background-color: #ffff; /* Cambia el color de fondo a blanco */
+  padding: 50px 0;
+  margin-top: -20px; /* Acerca la sección al video */
+  margin-left: 20px; /* Añade un margen a la izquierda */
+  margin-right: 20px; /* Añade un margen a la derecha */
 }
 
 .projects-titles {
@@ -1274,6 +1281,7 @@ html, body {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 15px;
+  border: 1px solid #E67817; /* Añadir borde naranja que coincide con el color del header */
 }
 
 .project-item img {
