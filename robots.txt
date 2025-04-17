@@ -1,0 +1,15 @@
+# robots.txt for diegocadenaingenieria.com
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /camer.html
+Allow: /proyectos.html
+Allow: /contact.html
+Allow: /assets/
+
+# Priority URLs for crawling
+Sitemap: http://diegocadenaingenieria.com/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 5 
