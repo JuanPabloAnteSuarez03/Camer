@@ -77,4 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: ../index.html');
     exit;
 }
+header('Content-Type: application/json');
+echo json_encode([
+  'success' => false,
+  'message' => 'Ocurrió un error interno.'
+]);
+
 ?>
