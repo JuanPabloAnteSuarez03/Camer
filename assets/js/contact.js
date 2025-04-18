@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(contactForm);
         
         // Enviar datos con fetch
-        fetch('forms/contact.php', {
+        fetch('/forms/contact.php', {
           method: 'POST',
           body: formData
         })
