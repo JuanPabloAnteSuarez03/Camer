@@ -10,6 +10,10 @@ use PHPMailer\PHPMailer\Exception;
 
 
 // Comprobar si se han enviado los datos del formulario
+if (!file_exists('../vendor/autoload.php')) {
+    echo json_encode(['success' => false, 'message' => 'PHPMailer no está instalado.']);
+    exit;
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validar que los campos no estén vacíos
