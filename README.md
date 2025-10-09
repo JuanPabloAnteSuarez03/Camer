@@ -133,7 +133,7 @@ Notas de seguridad:
 ### Créditos y licencia
 - Template base: UpConstruction por BootstrapMade ([licencia](https://bootstrapmade.com/license/)).
 - Imágenes, logos y contenido: Diego Cadena Ingeniería S.A.S.
-- Desarrollo/edición: Juan Camilo Silva Campos & Natalia Jaramillo.
+- Desarrollo/edición/diseño: Juan Pablo Ante, Juan Camilo Silva Campos & Natalia Jaramillo.
 
 
 ### Contacto oficial
