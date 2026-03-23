@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Allow: /assets/
 
-Sitemap: https://diegocadenaingenieria.com/sitemap.xml 
+Sitemap: https://diegocadenaingenieria.com/sitemap.xml
