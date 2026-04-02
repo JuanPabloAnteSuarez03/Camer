@@ -141,43 +141,27 @@ h6 {
   color: var(--nav-color);
 }
 
+/* Proyectos — cabecera tipo opción A (Nosotros / interior) */
 .h1-proyectos {
-  font-size: clamp(1.45rem, 3vw, 2.35rem);
-  color: #a44c1d;
-  text-align: left;
-  letter-spacing: 1.6px;
+  font-family: var(--heading-font);
+  font-size: clamp(1.05rem, 2vw, 1.55rem);
+  color: #24495f;
   text-transform: uppercase;
+  letter-spacing: 1.4px;
   font-weight: 800;
-  line-height: 1.2;
-  display: block;
-  width: fit-content;
+  line-height: 1.28;
+  border-bottom: 3px solid #e07b2a;
+  padding-bottom: 12px;
+  margin: 0 0 18px;
   max-width: 100%;
-  background: linear-gradient(
-    105deg,
-    rgba(224, 123, 42, 0.12) 0%,
-    rgba(255, 255, 255, 0.72) 58%,
-    rgba(255, 255, 255, 0.58) 100%
-  );
-  padding: 12px 18px 13px;
-  border-left: 4px solid #e07b2a;
-  border-bottom: 2px solid rgba(224, 123, 42, 0.36);
-  border-radius: 8px 10px 10px 4px;
-  box-shadow: 0 8px 22px rgba(18, 34, 44, 0.08);
   text-wrap: balance;
-  transition:
-    transform 0.28s ease,
-    box-shadow 0.28s ease,
-    border-color 0.28s ease;
-  margin-bottom: 16px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
   .h1-proyectos {
     letter-spacing: 1.1px;
-    padding: 10px 12px 11px;
-    border-left-width: 3px;
-    border-radius: 6px;
-    margin-bottom: 14px;
+    padding-bottom: 10px;
   }
 }
 
@@ -1463,9 +1447,9 @@ body {
 @media (max-width: 768px) {
   .page-title.full-background .container {
     width: min(1180px, 94%);
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 42px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: clamp(52px, 14vh, 100px);
   }
 
   .page-title.full-background .page-title-text {
@@ -1544,6 +1528,38 @@ body {
 }
 
 @media (max-width: 768px) {
+  /*
+   * CAMER hero móvil: texto anclado abajo (zona tierra / despeja máquina).
+   * Anula margin-top global de .page-title-text y compacta padding del bloque.
+   */
+  .page-title.full-background.camer-page-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: max(76px, calc(env(safe-area-inset-top, 0px) + 52px));
+    padding-bottom: 16px;
+    background-position: 70% 22%;
+    background-size: cover;
+  }
+
+  .page-title.full-background.camer-page-hero .container {
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: clamp(28px, 11vh, 76px);
+  }
+
+  .page-title.full-background.camer-page-hero .page-title-text {
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
   .page-title.full-background.camer-page-hero
     .page-title-text
     p.camer-hero-brand {
@@ -1562,6 +1578,17 @@ body {
     p.camer-hero-lead {
     font-size: clamp(0.96rem, 3.9vw, 1.08rem);
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title.full-background.camer-page-hero {
+    padding-top: max(72px, calc(env(safe-area-inset-top, 0px) + 48px));
+    background-position: 68% 18%;
+  }
+
+  .page-title.full-background.camer-page-hero .container {
+    padding-bottom: clamp(24px, 12vh, 68px);
   }
 }
 
@@ -1867,6 +1894,37 @@ section#camer-tecnologias.camer-tecnologias-section {
   line-height: 1.56;
 }
 
+.camer-tecnologias-section .timeline-read-more-btn {
+  display: none;
+  margin: 0.55rem 0 0;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8f3f1d;
+  background: #fffdfb;
+  border: 1px solid rgba(160, 68, 28, 0.45);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.camer-tecnologias-section .timeline-read-more-btn:hover {
+  color: #fffdfb;
+  background: #a0441c;
+  border-color: #8f3f1d;
+}
+
+.camer-tecnologias-section .timeline-read-more-btn:focus-visible {
+  outline: 2px solid rgba(160, 68, 28, 0.65);
+  outline-offset: 2px;
+}
+
 .camer-tecnologias-section .timeline-complementary {
   margin: 1.2rem 0 0;
   padding: 0.95rem 1rem;
@@ -2014,6 +2072,31 @@ section#camer-tecnologias.camer-tecnologias-section {
 
   .camer-tecnologias-section .video-heading::before {
     width: 26px;
+  }
+
+  .camer-tecnologias-section .timeline-read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .camer-tecnologias-section .timeline-item:not(.timeline-expanded) .timeline-content-body {
+    display: none;
+  }
+
+  .camer-tecnologias-section .timeline-item.timeline-expanded .timeline-content-body {
+    display: block;
+  }
+
+  .camer-tecnologias-section .timeline-content-body > p:first-of-type {
+    margin-top: 0.55rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .camer-tecnologias-section .timeline-content-body {
+    display: block !important;
   }
 }
 
@@ -2675,6 +2758,17 @@ section,
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .hero .carousel-item {
+    background-position: 95% center;
+    background-attachment: scroll;
+  }
+
+  .hero .carousel-item img {
+    object-position: 95% center;
+  }
+}
+
 .hero .carousel-item::before {
   content: "";
   background-color: color-mix(
@@ -3252,6 +3346,48 @@ section,
   color: var(--coffe-color);
   font-family: var(--heading-font);
   text-align: left;
+}
+
+.servicios-copy-tests {
+  max-width: 980px;
+  margin: 36px auto 0;
+}
+
+.servicios-copy {
+  margin: 0;
+  padding: 20px 22px;
+  font-size: 1.08rem;
+  font-family: var(--default-font);
+  font-weight: 500;
+  color: #4b372a;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+  text-wrap: pretty;
+}
+
+.servicios-copy strong {
+  font-weight: 800;
+  color: var(--coffe-color);
+}
+
+/* Propuesta 1: editorial limpia */
+.servicios-copy--1 {
+  background: rgba(255, 255, 255, 0.72);
+  border-left: 4px solid #8a4b23;
+  box-shadow: 0 4px 14px rgba(70, 39, 19, 0.08);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .servicios-copy-tests {
+    margin-top: 24px;
+  }
+
+  .servicios-copy {
+    padding: 16px 14px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
 }
 
 .camer-button {
@@ -5647,6 +5783,85 @@ h2.section-title {
 /*--------------------------------------------------------------
 # Proyectos Section II
 --------------------------------------------------------------*/
+
+.proyectos-page-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a0441c;
+}
+
+.proyectos-intro-plain {
+  max-width: 52rem;
+  margin: 0 0 0.15rem;
+  font-size: 1.03rem;
+  line-height: 1.65;
+}
+
+.proyectos-intro-plain-lead {
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #2f4653;
+}
+
+.proyectos-intro-plain-detail {
+  margin: 0;
+  color: #3d5562;
+}
+
+/* Bloque PROYECTOS + empresa (equivalente al antiguo .titulos-proyectos, alineado a la opción A) */
+.proyectos-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 1.65rem 0 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(224, 123, 42, 0.3);
+  font-family: var(--heading-font);
+}
+
+.proyectos-deck-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #24495f;
+  line-height: 1.08;
+}
+
+.proyectos-deck-brand {
+  margin: 0;
+  max-width: 22rem;
+  text-align: right;
+  font-size: clamp(0.76rem, 1.4vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c2551f;
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .proyectos-deck-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1.4rem 0 1.65rem;
+    padding-top: 1rem;
+  }
+
+  .proyectos-deck-brand {
+    text-align: left;
+    letter-spacing: 0.12em;
+  }
+
+  .proyectos-deck-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+  }
+}
 
 .proyectos-container-full {
   padding-top: 10rem;
